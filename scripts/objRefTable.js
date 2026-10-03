@@ -15,12 +15,14 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Particles,
 		C3.Behaviors.Fade,
 		C3.Plugins.Mouse,
+		C3.Plugins.Touch,
+		C3.Plugins.gamepad,
 		C3.Plugins.Sprite.Cnds.OnCollision,
 		C3.Plugins.Sprite.Acts.Destroy,
 		C3.Plugins.System.Acts.RestartLayout,
 		C3.Plugins.Audio.Acts.Play,
-		C3.Plugins.Text.Acts.SetText,
 		C3.Plugins.System.Acts.AddVar,
+		C3.Plugins.Text.Acts.SetText,
 		C3.Plugins.System.Cnds.CompareVar,
 		C3.Plugins.Sprite.Acts.SetVisible,
 		C3.Behaviors.jumpthru.Acts.SetEnabled,
@@ -32,9 +34,11 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Sprite.Acts.SetPosToObject,
 		C3.Behaviors.Platform.Acts.SetEnabled,
 		C3.Plugins.Mouse.Cnds.OnObjectClicked,
+		C3.Plugins.Touch.Cnds.OnTapGestureObject,
 		C3.Plugins.Sprite.Cnds.OnDestroyed,
 		C3.Plugins.System.Acts.ResetEventVar,
-		C3.Plugins.System.Cnds.OnLayoutStart
+		C3.Plugins.System.Cnds.OnLayoutStart,
+		C3.Behaviors.Platform.Acts.SimulateControl
 	];
 };
 self.C3_JsPropNameTable = [
@@ -84,7 +88,14 @@ self.C3_JsPropNameTable = [
 	{finish: 0},
 	{Спрайт23: 0},
 	{Спрайт24: 0},
+	{Тач: 0},
+	{Геймпад: 0},
 	{Спрайт26: 0},
+	{coins: 0},
+	{cons: 0},
+	{Спрайт27: 0},
+	{Спрайт28: 0},
+	{Спрайт29: 0},
 	{coin: 0}
 ];
 
@@ -125,6 +136,12 @@ self.InstanceType = {
 	finish: class extends self.ITextInstance {},
 	Спрайт23: class extends self.ISpriteInstance {},
 	Спрайт24: class extends self.ISpriteInstance {},
+	Тач: class extends self.IInstance {},
+	Геймпад: class extends self.IInstance {},
 	Спрайт26: class extends self.ISpriteInstance {},
-	coin: class extends self.ITextInstance {}
+	coins: class extends self.ITextInstance {},
+	cons: class extends self.ITextInstance {},
+	Спрайт27: class extends self.ISpriteInstance {},
+	Спрайт28: class extends self.ISpriteInstance {},
+	Спрайт29: class extends self.ISpriteInstance {}
 }
