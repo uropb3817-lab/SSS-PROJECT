@@ -38,6 +38,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Sprite.Cnds.OnDestroyed,
 		C3.Plugins.System.Acts.ResetEventVar,
 		C3.Plugins.System.Cnds.OnLayoutStart,
+		C3.Plugins.Touch.Cnds.OnHoldGestureObject,
 		C3.Behaviors.Platform.Acts.SimulateControl
 	];
 };
